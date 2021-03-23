@@ -8,7 +8,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantLock;
 
 
-
+@Getter
 public class ServiceLocator {
     @Getter
     public static final int CARS_COUNT = 4;

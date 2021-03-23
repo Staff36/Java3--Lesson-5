@@ -28,8 +28,8 @@ public class MainClass {
         }
 
         try {
-            startCountDownLatch.await(1, TimeUnit.HOURS);
             startLineLock.lock();
+            startCountDownLatch.await(1, TimeUnit.HOURS);
             System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
             startLineLock.unlock();
             finishCountDownLatch.await(1, TimeUnit.HOURS);
